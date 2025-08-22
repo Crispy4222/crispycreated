@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev --host 0.0.0.0",
-    "build": "nuxt build",
-    "generate": "nuxt generate",
+    "dev": "cross-env LIGHTNINGCSS_FORCE_WASM=1 nuxt dev --host 0.0.0.0",
+    "build": "cross-env LIGHTNINGCSS_FORCE_WASM=1 nuxt build",
+    "generate": "cross-env LIGHTNINGCSS_FORCE_WASM=1 nuxt generate",
     "preview": "npx serve .output/public"
   },
   "dependencies": {
@@ -16,5 +16,9 @@
     "nuxt": "^4.0.3",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "lightningcss-wasm": "^1.30.1"
   }
 }
