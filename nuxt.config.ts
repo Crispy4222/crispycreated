@@ -1,5 +1,13 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
+  modules: ['@nuxt/ui', '@nuxt/icon'],
+  app: {
+    head: {
+      title: 'CRISPY • Felix Garage',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'theme-color', content: '#0f172a' }
+      ]
+    }
+  },
+  ui: { theme: { extend: { colors: { brand: '#06b6d4' } } } },
 })
